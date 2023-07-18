@@ -1,0 +1,42 @@
+// compile code :  gcc -o [exe name] [programname].c
+
+// Pointer is a variable that holds the memory address of another varibale.
+
+// %d - Decimal  -- receive data value
+// %u - Unsigned Decimal -- receive data value
+// %x - Hexadecimal -- receive data value
+
+// %s - String -- expects to be given a memory address , it prints the data at the memory address until a null byte is encountered
+// %n - Number of bytes written so far  -- expects to be given memory address. It writes the number of bytes that have been written so far into the memory adress
+
+// Parameter Output Type % d Decimal % u Unsigned decimal % x Hexadecimal Parameter Output Type % s String % n Number of bytes written so far .
+
+// Typecasting - temporarily changing the datatype of a variable.
+
+// atoi() -- This function converts data types. It accepts a pointer to a string as an argument and returns the integer value it represents.
+
+// Segmentation fault -- When a program tries to access an address that is out of bound(zero/0x00000000).
+                         When a program tries to access this memory address (0x00000000), it crashed with a segmentation fault.
+
+
+// gdb -q ./stack_example.exe - check how program is placed in memory code as it runs
+// disass
+
+// Compiled code goes into the text segment of memory
+// Variables goes into the rest : 
+   Stack - local variables 
+   Heap - Used for dynamic memory allocation during runtime, managed by a programmer (me :) )
+   BSS - Stores uninitialised global or static variables, managed by the system
+        int global_variable; // Initialized to zero in BSS segment
+        int main() {
+            static int static_variable; // Initialized to zero in BSS segment
+            return 0;
+        }
+   Data - Stores initialised global or static varibales, managed by the system. 
+        int global_variable = 42; // Initialized with the value 42 in Data segment
+        int main() {
+            static int static_variable = 100; // Initialized with the value 100 in Data segment
+            return 0;
+        }
+
+
