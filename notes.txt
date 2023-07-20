@@ -39,4 +39,22 @@
             return 0;
         }
 
+fwrite() -- Opens a file, if the file doesnt exist, it will be created
+         -- "w" mode for opening the file for writting purposes.
+         -- "wb" similar to "w" but for writting binary to the file
+         -- "a" for appending to a file
+         -- "ab" opening the file for binary appending
+CreateFile() -- Used to open a file in reading mode
+             -- FILE_SHARE_READ mode allows other processes to read from the file concurrently
+             -- OPEN_EXISTING specifies that the file should only be opened if it exists
+WriteFile() -- Write data to a file in binary mode.
+
+CloseHandle() -- Used to close the file
+
+A block of memory/memory(1 Byte) has 8 bits
+
+Integer -- Has 4 bytes in 32 bit systems(x86) 00000000 00000000 00000000 00000001
+        -- Has 8 bytes in 64 bit systems 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001
+
+String -- A character in a string occupies 1 byte, i.e, each character has its own byte.
 
